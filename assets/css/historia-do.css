@@ -1,0 +1,142 @@
+/* historia-do.css */
+/* Estilos específicos para la página de Historia del DO */
+
+#timeline-nav {
+    background: #f7f7f7;
+    padding: 2em 0;
+    margin-bottom: 3em;
+    border-top: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #e5e5e5;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-dots {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #878787;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-dot span {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.timeline-dot.active {
+    background: #ed786a;
+    transform: scale(1.2);
+}
+
+.timeline-dot.active span {
+    color: #ed786a;
+    font-weight: 600;
+}
+
+.era-intro {
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.era-card {
+    background: #fff;
+    padding: 2em;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2em;
+}
+
+.era-card h3 {
+    color: #ed786a;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+.era-card ul {
+    margin-left: 1.5em;
+}
+
+.era-card ul li {
+    margin-bottom: 0.5em;
+}
+
+.era-highlight {
+    background: #f9f9f9;
+    padding: 1.5em;
+    border-left: 4px solid #ed786a;
+    margin: 1.5em 0;
+}
+
+.era-highlight h4 {
+    margin-top: 0;
+    color: #ed786a;
+}
+
+.figure-card {
+    text-align: center;
+    padding: 1.5em;
+    margin: 0.5em;
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.figure-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1em;
+    border: 4px solid #e5e5e5;
+}
+
+.figure-card h4 {
+    margin: 0.5em 0;
+    color: #ed786a;
+}
+
+.figure-card p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+@media screen and (max-width: 736px) {
+    .timeline-dot span {
+        display: none;
+    }
+    
+    .figure-card {
+        min-width: 150px;
+    }
+}
